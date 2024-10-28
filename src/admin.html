@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="admin-container">
+  <h1>Admin Panel</h1>
+  <input type="text" id="searchInput" placeholder="Search users...">
+  <div id="message" class="message" style="display: none;"></div>
+  <table>
+    <thead>
+    <tr>
+      <th onclick="sortTable(0)">Username</th>
+
+      <th onclick="sortTable(1)">Email</th>
+      <th onclick="sortTable(2)">Course </th>
+      <th onclick="sortTable(3)">Role</th>
+
+
+    </tr>
+    </thead>
+    <tbody id="userTableBody"> </tbody>
+  </table>
+</div>
+<script src="../functions/admin-panel.js"></script>
+</body>
+</html>
