@@ -9,8 +9,8 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-<script src="java.js"  type="module"></script>
-<script src="scripts.js" type="text/javascript"></script>
+
+<script src="java.js" type="text/javascript"></script>
 <script src="black.js" type="text/javascript"></script>
 <button onclick="toggleDarkMode()" class="btn btn-dark" style="position: fixed; top: 20px; right: 20px;">
     Toggle Dark Mode
@@ -74,20 +74,21 @@
 <body>
 
 <div class="container mt-5">
-    <form style="margin-left:40% " class="format" >
-        <div class="col-3 col-sm-2 col-lg-6  mb-3">
+    <form style="margin-left:40%;" class="format" onsubmit="return handleAdminLogin()">
+        <div class="col-3 col-sm-2 col-lg-6 mb-3">
             <label for="name" class="form-label">Name:</label>
             <input type="text" class="names form-control" id="name" required>
         </div>
 
-        <div class="col-3 col-sm-2 col-lg-6  mb-3">
-            <label for="email" class="form-label" >Email:</label>
+        <div class="col-3 col-sm-2 col-lg-6 mb-3">
+            <label for="email" class="form-label">Email:</label>
             <input type="email" class="something form-control" id="email" required>
         </div>
 
-        <button type="submit" class="btn btn-primary" onclick="signup()">Enter</button>
+        <button type="submit" class="btn btn-primary">Enter</button>
     </form>
 </div>
+
 
 
 

@@ -10,22 +10,52 @@
 <div class="admin-container">
   <h1>Admin Panel</h1>
   <input type="text" id="searchInput" placeholder="Search users...">
+
+
+  <button onclick="openUserForm()" class="create-btn">Create User</button>
+
   <div id="message" class="message" style="display: none;"></div>
   <table>
     <thead>
     <tr>
       <th onclick="sortTable(0)">Username</th>
-
       <th onclick="sortTable(1)">Email</th>
-      <th onclick="sortTable(2)">Course </th>
+      <th onclick="sortTable(2)">Course</th>
       <th onclick="sortTable(3)">Role</th>
-
-
+      <th>Actions</th> <!-- New column for action buttons -->
     </tr>
     </thead>
-    <tbody id="userTableBody"> </tbody>
+    <tbody id="userTableBody"></tbody>
   </table>
 </div>
-<script src="../functions/admin-panel.js"></script>
+
+<!-- Form Modal for Creating/Editing a User -->
+<div id="userFormModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span onclick="closeUserForm()" class="close">&times;</span>
+    <h2 id="formTitle">Create User</h2>
+    <form onsubmit="return handleUserFormSubmit()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="course">Course:</label>
+      <select id="course">
+        <option value="Beginner English">Beginner English</option>
+        <option value="Intermediate English">Intermediate English</option>
+        <option value="Advanced English">Advanced English</option>
+      </select>
+
+      <label for="role">Role:</label>
+      <input type="text" id="role" required>
+
+      <button type="submit" class="btn btn-primary">Save User</button>
+    </form>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>
