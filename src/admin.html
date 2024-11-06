@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="admin.css">
 </head>
 <body>
+<script src="scripts.js"></script>
 <div class="admin-container">
   <h1>Admin Panel</h1>
-  <input type="text" id="searchInput" placeholder="Search users...">
 
 
-  <button onclick="openUserForm()" class="create-btn">Create User</button>
+
+
 
   <div id="message" class="message" style="display: none;"></div>
   <table>
@@ -55,7 +56,9 @@
     </form>
   </div>
 </div>
+<body onload="loadUsers()">
+<!-- Your admin panel structure here -->
+</body>
 
-<script src="scripts.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
 <button onclick="toggleDarkMode()" class="btn btn-dark" style="position: fixed; top: 20px; right: 20px;">
   Toggle Dark Mode
 </button>
-<header class="text-white p-3 bg-dark">
+<header class="text-white p-3 " style="background-color:black">
   <div class="container ds-flex">
     <div class="row">
       <div class="col-12 col-sm-12">
@@ -63,7 +63,7 @@
   </div>
 </header>
 <div class="container mt-5">
-  <form style="margin-left: 40%" class="form">
+  <form style="margin-left: 40%" class="form" onsubmit="signup(event)">
     <div class="mb-3 col-3 col-sm-2 col-lg-6">
       <label for="name" class="form-label" id="user">Name:</label>
       <input type="text" class="names" id="name" required>
@@ -86,7 +86,9 @@
     <button type="submit" class="btn btn-primary" onclick="signup()">Submit</button>
   </form>
 </div>
+<form onsubmit="signup(event)">
 
+</form>
 <footer class="footer" style="position: absolute;">
   <p>Nurislam Toktarov</p>
   <p>SE-2302</p>

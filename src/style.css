@@ -187,12 +187,14 @@ body.dark-mode {
 body.dark-mode header,
 body.dark-mode .header {
     background-color: #1e1e1e;
-    color: #ffffff;
+    color: red;
+    width: 100%;
+
 }
 
 /* Dark mode for navbar */
 body.dark-mode .navbar {
-    background-color: #1e1e1e;
+    background-color: black ;
 }
 
 body.dark-mode .navbar .nav-link {
