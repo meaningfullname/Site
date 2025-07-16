@@ -254,6 +254,91 @@ body.dark-mode .btn:hover {
     border-color: #666666;
 }
 
+body.dark-mode .snow,
+body.dark-mode .snow:after,
+body.dark-mode .snow:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+            radial-gradient(2px 2px at 50px 300px, #fff, transparent),
+            radial-gradient(3px 3px at 150px 100px, #fff, transparent),
+            radial-gradient(2px 2px at 400px 200px, #fff, transparent),
+            radial-gradient(4px 4px at 600px 50px, #fff, transparent),
+            radial-gradient(3px 3px at 750px 300px, #fff, transparent),
+            radial-gradient(5px 5px at 100px 50px, #fff, transparent),
+            radial-gradient(2px 2px at 900px 500px, #fff, transparent),
+            radial-gradient(3px 3px at 1300px 200px, #fff, transparent),
+            radial-gradient(2px 2px at 1200px 300px, #fff, transparent),
+            radial-gradient(3px 3px at 1600px 400px, #fff, transparent);
+    animation: snowFall 5s linear infinite;
+}
+
+body.dark-mode .snow:before {
+    content: '';
+    background-image:
+            radial-gradient(3px 3px at 100px 50px, #fff, transparent),
+            radial-gradient(4px 4px at 200px 300px, #fff, transparent),
+            radial-gradient(3px 3px at 500px 400px, #fff, transparent),
+            radial-gradient(2px 2px at 700px 100px, #fff, transparent),
+            radial-gradient(4px 4px at 900px 300px, #fff, transparent),
+            radial-gradient(5px 5px at 1200px 50px, #fff, transparent),
+            radial-gradient(2px 2px at 1400px 200px, #fff, transparent),
+            radial-gradient(3px 3px at 1600px 300px, #fff, transparent);
+    opacity: 0.8;
+    animation: snowFall 7s linear infinite;
+}
+
+body.dark-mode .snow:after {
+    content: '';
+    background-image:
+            radial-gradient(2px 2px at 50px 200px, #fff, transparent),
+            radial-gradient(3px 3px at 100px 400px, #fff, transparent),
+            radial-gradient(2px 2px at 300px 150px, #fff, transparent),
+            radial-gradient(4px 4px at 500px 500px, #fff, transparent),
+            radial-gradient(3px 3px at 800px 100px, #fff, transparent),
+            radial-gradient(2px 2px at 900px 300px, #fff, transparent),
+            radial-gradient(4px 4px at 1100px 200px, #fff, transparent),
+            radial-gradient(2px 2px at 1300px 400px, #fff, transparent);
+    opacity: 0.6;
+    animation: snowFall 6s linear infinite;
+}
+
+@keyframes snowFall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(650px);
+    }
+}
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#scrollToTop:hover {
+    background-color: #424242;
+
+}
+
+
+
+
+
+
 
 
 

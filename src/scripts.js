@@ -1,8 +1,9 @@
 
-const document=document.getElementsByClassName('som')[0];
-document.addEventListener('mouseover', () => {
 
-})
+document.addEventListener("DOMContentLoaded", () => {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+});
 function initializeAdminUser() {
     const storedUsers = localStorage.getItem("users");
     let users;
@@ -178,19 +179,21 @@ document.addEventListener('DOMContentLoaded', () => {
     loadUsers();
 });
 
+window.addEventListener("scroll", () => {
+    const scrollToTopButton = document.getElementById("scrollToTop");
+    if (window.scrollY > 200) {
+        scrollToTopButton.style.display = "block"; // Show button when scrolled down
+    } else {
+        scrollToTopButton.style.display = "none"; // Hide button when at the top
+    }
+});
 
-
-const line=document.createElement('div')
-line.offsetHeight = 20;
-line.offsetWidth = 20;
-line.color='red'
-document.body.footer.appendChild(line);
-
-
-
-// Function to toggle Dark Mode
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+
+
+
 
 
